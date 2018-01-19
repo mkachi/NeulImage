@@ -1,17 +1,11 @@
-#include <Windows.h>
 #include <chrono>
 #if defined(DEBUG) | defined(_DEBUG)
 #include <crtdbg.h>
 #include <iostream>
+#endif
 #include "Demo.h"
-#endif
-
-#ifdef _WINDOWS
+#define GLEW_STATIC
 #include <glew.h>
-#include <gl/GL.h>
-#include <gl/GLU.h>
-#endif
-
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEIGHT 720
 #define TITLE_NAME L"SnowPlain-ImageLibrary"
@@ -24,6 +18,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
 	//_CrtSetBreakAlloc(29784);
 	if (AllocConsole())
 	{
+#pragma warning(disable : 4996)
 		freopen("CONIN$", "rb", stdin);
 		freopen("CONOUT$", "wb", stdout);
 		freopen("CONOUT$", "wb", stderr);
@@ -94,10 +89,26 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
 	std::chrono::steady_clock::time_point lastTime;
 	float deltaTime = 0.0f;
 
-	Init();
+	glewExperimental = GL_TRUE;
+	if (glewInit() != GLEW_OK)
+	{
+		wglMakeCurrent(NULL, NULL);
+		wglDeleteContext(rc);
+		if (ReleaseDC(winHandle, dc))
+		{
+			printf("Cannot release device context.\n");
+			return 0;
+		}
+		DestroyWindow(winHandle);
+		UnregisterClass(TITLE_NAME, instance);
+	}
+
+	Init(SCREEN_WIDTH, SCREEN_HEIGHT);
 
 	MSG msg;
 	ZeroMemory(&msg, sizeof(msg));
+	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+
 	while (msg.message != WM_QUIT)
 	{
 		if (PeekMessage(&msg, NULL, 0U, 0U, PM_REMOVE))
@@ -113,7 +124,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
 			lastTime = currentTime;
 
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-			glClearColor(0.0f, 1.0f, 0.0f, 1.0f);
 			SwapBuffers(dc);
 
 			Update(deltaTime);

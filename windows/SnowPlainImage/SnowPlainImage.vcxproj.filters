@@ -4,4 +4,7 @@
     <ClInclude Include="..\include\SnowPlainImage.h" />
     <ClInclude Include="..\include\SPSubModule.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\LoadPng.cpp" />
+  </ItemGroup>
 </Project>
