@@ -15,3 +15,6 @@ The GLEW library used in our project. Used GLEW source codes are published in [G
 
 #### GLM
 The GLM library used in our project. Used GLM source codes are published in [GLM](https://glm.g-truc.net/0.9.8/index.html), and under [MIT license](http://glm.g-truc.net/copying.txt).
+
+#### GLFW
+The GLFW library used in our project. Used GLFW source codes are published in [GLFW](http://www.glfw.org/), and under [libpng license](http://www.glfw.org/license.html).
