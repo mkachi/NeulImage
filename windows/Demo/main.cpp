@@ -4,8 +4,7 @@
 #include <iostream>
 #endif
 #include "Demo.h"
-#define GLEW_STATIC
-#include <glew.h>
+
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEIGHT 720
 #define TITLE_NAME L"SnowPlain-ImageLibrary"
@@ -103,12 +102,17 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
 		UnregisterClass(TITLE_NAME, instance);
 	}
 
-	Init(SCREEN_WIDTH, SCREEN_HEIGHT);
+	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	glFrontFace(GL_CCW);
+	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+
 
 	MSG msg;
 	ZeroMemory(&msg, sizeof(msg));
-	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
+	Init(SCREEN_WIDTH, SCREEN_HEIGHT);
 	while (msg.message != WM_QUIT)
 	{
 		if (PeekMessage(&msg, NULL, 0U, 0U, PM_REMOVE))

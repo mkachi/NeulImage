@@ -160,11 +160,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Demo.h" />
+    <ClInclude Include="Shader.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SnowPlainImage\SnowPlainImage.vcxproj">
       <Project>{07a6faad-8428-4d16-80f7-ed706be94679}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fragment.frag" />
+    <None Include="vertex.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
