@@ -1,25 +1,24 @@
 #pragma once
 
-#ifdef _WINDOWS
-#include <Windows.h>
-#define GLEW_STATIC
-#include <glew.h>
-#include <gl/GL.h>
-#include <gl/GLU.h>
-#endif
+#include "Scene.h"
+#include "Renderer.h"
 
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-using namespace glm;
+class Demo
+	: public Scene
+{
+private:
+	Sprite* sprite;
+	BatchRenderer* renderer;
+	Material* material;
+	mat4 pv;
 
-#include "Shader.h"
+public:
+	Demo() {}
+	virtual ~Demo() {}
 
-#include <SnowPlainImage.h>
+	void init() override;
+	void update(Time& time) override;
+	void render() override;
+	void destroy() override;
 
-GLuint loadPngDemo(const char* filename);
-
-void Init(int screenWidth, int screenHeight);
-void InitDrawRect(int screenWidth, int screenHeight);
-void Update(float dt);
-void Render();
-void Destroy();
+};
