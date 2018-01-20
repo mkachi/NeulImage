@@ -167,6 +167,7 @@
     <ClInclude Include="..\include\SPSubModule.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\LoadBmp.cpp" />
     <ClCompile Include="src\LoadPng.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

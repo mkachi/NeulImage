@@ -6,5 +6,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\LoadPng.cpp" />
+    <ClCompile Include="src\LoadBmp.cpp" />
   </ItemGroup>
 </Project>
