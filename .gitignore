@@ -77,8 +77,6 @@ xcuserdata/
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
-x64/
-x86/
 bld/
 [Bb]in/
 [Oo]bj/
@@ -353,3 +351,5 @@ __pycache__/
 
 
 # End of https://www.gitignore.io/api/c++,xcode,visualstudio
+
+!*.lib
