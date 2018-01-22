@@ -3,17 +3,12 @@
 #include <string.h>
 #include "png/png.h"
 
-static FILE*		fp = nullptr;
-static png_struct*	png = nullptr;
-static png_info*	info = nullptr;
-static png_info*	endInfo = nullptr;
 static png_byte*	imageData = nullptr;
-static png_byte**	rowPtr = nullptr;
 
 SP_SM bool loadPng(const char* filename, int* width, int* height, ImageFormat* format, unsigned char** data)
 {
 	png_byte header[8];
-	fp = fopen(filename, "rb");
+	FILE* fp = fopen(filename, "rb");
 	if (fp == NULL)
 	{
 		// not found png
@@ -28,7 +23,7 @@ SP_SM bool loadPng(const char* filename, int* width, int* height, ImageFormat* f
 		return false;
 	}
 
-	png = png_create_read_struct(PNG_LIBPNG_VER_STRING, NULL, NULL, NULL);
+	png_struct* png = png_create_read_struct(PNG_LIBPNG_VER_STRING, NULL, NULL, NULL);
 	if (!png)
 	{
 		// png_create_read_struct returned 0
@@ -36,7 +31,7 @@ SP_SM bool loadPng(const char* filename, int* width, int* height, ImageFormat* f
 		return false;
 	}
 
-	info = png_create_info_struct(png);
+	png_info* info = png_create_info_struct(png);
 	if (!info)
 	{
 		// png_create_info_struct returned 0
@@ -45,7 +40,7 @@ SP_SM bool loadPng(const char* filename, int* width, int* height, ImageFormat* f
 		return false;
 	}
 
-	endInfo = png_create_info_struct(png);
+	png_info* endInfo = png_create_info_struct(png);
 	if (!endInfo)
 	{
 		// png_create_info_struct returned 0
@@ -96,7 +91,7 @@ SP_SM bool loadPng(const char* filename, int* width, int* height, ImageFormat* f
 	png_size_t rowBytes = png_get_rowbytes(png, info);
 	rowBytes += 3 - ((rowBytes - 1) % 4);
 
-	imageData = (png_byte*)malloc(rowBytes * tempHeight * sizeof(png_byte) + 15);
+	imageData = new png_byte[rowBytes * tempHeight * sizeof(png_byte) + 15];
 	if (imageData == NULL)
 	{
 		// could not allocate memory for PNG image data
@@ -105,7 +100,7 @@ SP_SM bool loadPng(const char* filename, int* width, int* height, ImageFormat* f
 		return false;
 	}
 
-	rowPtr = (png_byte**)malloc(tempHeight * sizeof(png_byte*));
+	png_byte** rowPtr = new png_byte*[tempHeight * sizeof(png_byte*)];
 	if (rowPtr == NULL)
 	{
 		// could not allocate memory for PNG row pointers
@@ -117,10 +112,18 @@ SP_SM bool loadPng(const char* filename, int* width, int* height, ImageFormat* f
 
 	for (unsigned int i = 0; i < tempHeight; ++i)
 	{
-	//	rowPtr[tempHeight - 1 - i] = imageData + i * rowBytes;
+	//	rowPtr[tempHeight - 1 - i] = imageData + i * rowBytes; is flip vertical png
 		rowPtr[i] = imageData + i * rowBytes;
 	}
 	png_read_image(png, rowPtr);
+	fclose(fp);
+	png_destroy_read_struct(&png, &info, &endInfo);
+
+	if (rowPtr != nullptr)
+	{
+		delete[] rowPtr;
+		rowPtr = nullptr;
+	}
 
 	(*data) = imageData;
 
@@ -129,8 +132,9 @@ SP_SM bool loadPng(const char* filename, int* width, int* height, ImageFormat* f
 
 SP_SM void cleanUpPng()
 {
-	png_destroy_read_struct(&png, &info, &endInfo);
-	free(imageData);
-	free(rowPtr);
-	fclose(fp);
+	if (imageData != nullptr)
+	{
+		delete[] imageData;
+		imageData = nullptr;
+	}
 }
