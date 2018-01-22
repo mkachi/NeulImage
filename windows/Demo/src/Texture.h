@@ -66,18 +66,11 @@ static GLuint loadBmpDemo(const std::string& filename, int* outWidth, int* outHe
 	case ImageFormat::RGBA:
 		format = GL_RGBA;
 		break;
-	case ImageFormat::BGR:
-		format = GL_BGR;
-		break;
-	case ImageFormat::BGRA:
-		format = GL_BGRA;
-		break;
 	}
-
 	GLuint result;
 	glGenTextures(1, &result);
 	glBindTexture(GL_TEXTURE_2D, result);
-	glTexImage2D(GL_TEXTURE_2D, 0, format,
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB,
 		width, height, 0, format, GL_UNSIGNED_BYTE, textureData);
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);

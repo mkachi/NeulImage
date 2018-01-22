@@ -7,7 +7,7 @@ void Demo::init()
 	material = new Material();
 	material->materialID = 0;
 	material->shader = loadShader("res/shader.vert", "res/shader.frag");
-	material->texture = loadBmpDemo("res/bmpTest_24.bmp", &imageWidth, &imageHeight);
+	material->texture = loadBmpDemo("res/bmpTest_16.bmp", &imageWidth, &imageHeight);
 
 	renderer = new BatchRenderer();
 

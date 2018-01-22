@@ -6,8 +6,6 @@ enum class ImageFormat
 {
 	RGB,
 	RGBA,
-	BGR,
-	BGRA,
 };
 extern "C"
 {
