@@ -1,6 +1,5 @@
 #include "SnowPlainImage.h"
 #include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
 
 #pragma pack(push, 2)
@@ -124,6 +123,7 @@ SP_SM bool loadBmp(const char* filename, int* width, int* height, ImageFormat* f
 
 	return true;
 }
+
 SP_SM void cleanUpBmp()
 {
 	if (rowData != nullptr)

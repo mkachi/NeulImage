@@ -169,6 +169,7 @@
   <ItemGroup>
     <ClCompile Include="src\LoadBmp.cpp" />
     <ClCompile Include="src\LoadPng.cpp" />
+    <ClCompile Include="src\LoadTga.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

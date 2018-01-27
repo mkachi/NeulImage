@@ -14,4 +14,7 @@ extern "C"
 
 	SP_SM bool loadBmp(const char* filename, int* width, int* height, ImageFormat* format, unsigned char** data);
 	SP_SM void cleanUpBmp();
+
+	SP_SM bool loadTga(const char* filename, int* width, int* height, ImageFormat* format, unsigned char** data);
+	SP_SM void cleanUpTga();
 }
