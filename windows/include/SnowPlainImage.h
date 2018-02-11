@@ -17,4 +17,7 @@ extern "C"
 
 	SP_SM bool loadTga(const char* filename, int* width, int* height, ImageFormat* format, unsigned char** data);
 	SP_SM void cleanUpTga();
+
+	SP_SM bool loadJpeg(const char* filename, int* width, int* heignt, ImageFormat* format, unsigned char** data);
+	SP_SM void cleanUpJpeg();
 }
