@@ -1,6 +1,6 @@
 #pragma once
 
-#include "SPSubModule.h"
+#include "SubModule.h"
 
 enum class ImageFormat
 {
