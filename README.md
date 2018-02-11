@@ -5,7 +5,8 @@ Future support formats jpg, dds, psd.
 
 ## Public software license notice
 ### SnowPlainImage
-#### zlib : 1.2.11
+#### zlib
+##### version : 1.2.11
 The zlib library used in our project. Used zlib source codes are published in [zlib](https://zlib.net/), and under [zlib license](https://zlib.net/zlib_license.html).
 
 #### libpng
