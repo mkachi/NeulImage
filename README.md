@@ -11,6 +11,9 @@ The zlib library used in our project. Used zlib source codes are published in [z
 #### libpng
 The libpng library used in our project. Used libpng source codes are published in [libpng](http://www.libpng.org/pub/png/libpng.html), and under [libpng license](http://www.libpng.org/pub/png/src/libpng-LICENSE.txt).
 
+#### libjpeg
+The libjpeg library used in our project. Used libjpeg source codes are published in [libjpeg](http://libjpeg.sourceforge.net/), and under [libjpeg license](http://jpegclub.org/reference/libjpeg-license/).
+
 ### Demo project
 #### GLEW
 The GLEW library used in our project. Used GLEW source codes are published in [GLEW](http://glew.sourceforge.net/), and under [Modified BSD license](http://glew.sourceforge.net/glew.txt).
