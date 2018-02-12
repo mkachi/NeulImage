@@ -4,7 +4,7 @@ Supported formats are bmp, tga, png, jpg.
 Future support formats dds, psd and image save.  
 
 ## License
-SnowPlainImage is licensed under the [GNU Lesser General Public License v3.0](https://github.com/MKachi/SnowPlainImage/blob/master/LICENSE)  
+SnowPlainImage is licensed under the [GNU Lesser General Public License v2.1](https://github.com/MKachi/SnowPlainImage/blob/master/LICENSE)  
 
 
 ## API Document
