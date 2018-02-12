@@ -4,6 +4,7 @@
 #include <stdio.h>
 
 /**
+  *	@author M_Kachi
   *	@enum ImageType
   *	@brief Image formats
 */
@@ -17,8 +18,9 @@ enum class ImageType
 };
 
 /**
-*	@enum ColorFormat
-*	@brief Image color formats
+	* @author M_Kachi
+	* @enum ColorFormat
+	* @brief Image color formats
 */
 enum class ColorFormat
 {
@@ -27,7 +29,7 @@ enum class ColorFormat
 };
 
 /**
-  *	@author ¸ÀÄ«Ä¡
+  *	@author M_Kachi
   *	@date 2018-02-13
   *	@brief The errors are stacked on the stack and pulled one by one.
   *	@return Error message
@@ -35,7 +37,7 @@ enum class ColorFormat
 SP_SM const char* spGetError();
 
 /**
-  *	@author ¸ÀÄ«Ä¡
+  *	@author M_Kachi
   *	@date 2018-02-13
   *	@brief Load image file.
   *	@param filePath - Image file path
@@ -47,7 +49,7 @@ SP_SM const char* spGetError();
 */
 SP_SM bool spLoadImage(const char* filePath, int& width, int& height, ColorFormat& format, unsigned char*& pixels);
 /**
-  *	@author ¸ÀÄ«Ä¡
+  *	@author M_Kachi
   *	@date 2018-02-13
   *	@brief Load image file.
   *	@param file - Image file pointer
@@ -59,7 +61,7 @@ SP_SM bool spLoadImage(const char* filePath, int& width, int& height, ColorForma
 */
 SP_SM bool spLoadImage(FILE*& file, int& width, int& height, ColorFormat& format, unsigned char*& pixels);
 /**
-  *	@author ¸ÀÄ«Ä¡
+  *	@author M_Kachi
   *	@date 2018-02-13
   *	@brief Load png file.
   *	@param file - Image file pointer
@@ -71,7 +73,7 @@ SP_SM bool spLoadImage(FILE*& file, int& width, int& height, ColorFormat& format
 */
 SP_SM bool spLoadPng(FILE*& file, int& width, int& height, ColorFormat& format, unsigned char*& pixels);
 /**
-  *	@author ¸ÀÄ«Ä¡
+  *	@author M_Kachi
   *	@date 2018-02-13
   *	@brief Load bmp file.
   *	@param file - Image file pointer
@@ -83,7 +85,7 @@ SP_SM bool spLoadPng(FILE*& file, int& width, int& height, ColorFormat& format, 
 */
 SP_SM bool spLoadBmp(FILE*& file, int& width, int& height, ColorFormat& format, unsigned char*& pixels);
 /**
-  *	@author ¸ÀÄ«Ä¡
+  *	@author M_Kachi
   *	@date 2018-02-13
   *	@brief Load tga file.
   *	@param file - Image file pointer
@@ -95,7 +97,7 @@ SP_SM bool spLoadBmp(FILE*& file, int& width, int& height, ColorFormat& format, 
 */
 SP_SM bool spLoadTga(FILE*& file, int& width, int& height, ColorFormat& format, unsigned char*& pixels);
 /**
-  *	@author ¸ÀÄ«Ä¡
+  *	@author M_Kachi
   *	@date 2018-02-13
   *	@brief Load jpeg file.
   *	@param file - Image file pointer
