@@ -32,4 +32,4 @@ ColorFormat is images color format.
 |---------|----------------------------------------------|
 | RGB     | Image color format (Red, Green, Blue)        |
 | RGBA    | Image color format (Red, Green, Blue, Alpha) |  
-##### [Back](Document.html)
+##### [Back](Document.md)

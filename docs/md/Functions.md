@@ -163,4 +163,4 @@ Load jpeg image file.
 | Success| true         |
 | Failed | false        |  
 
-##### [Back](Document.html)
+##### [Back](Document.md)

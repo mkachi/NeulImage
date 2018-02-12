@@ -1,8 +1,8 @@
 ## SnowPlainImage  
-* [Enumerations](Enumerations.html)  
+* [Enumerations](Enumerations.md)  
     * ImageType  
     * ColorFormat  
-* [Functions](Functions.html)  
+* [Functions](Functions.md)  
     * spGetError  
     * spLoadImage  
     * spLoadPng  

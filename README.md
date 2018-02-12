@@ -4,7 +4,8 @@ Supported formats are bmp, tga, png, jpg.
 Future support formats dds, psd.
 
 ## API Document
-[Document](docs/md/Document.md)
+[Document - markdown](docs/md/Document.md)  
+[Document - web](https://mkachi.github.io/SnowPlainImage/)
 
 ## Public software license notice
 ### SnowPlainImage
