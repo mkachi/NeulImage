@@ -1,6 +1,6 @@
 ## SnowPlainImage  
 ### Enumerations  
-#### ImageType
+#### ImageType  
 ``` cpp  
 enum class ImageType
 {
@@ -11,15 +11,18 @@ enum class ImageType
     Unknown,
 };
 ```  
+**Description**  
 ImageType is images file format.  
-| Value   | Description                                |
-|---------|--------------------------------------------|
-| Png     | png image format.                          |
-| Bmp     | 24bit Bitmap or 32bit Bitmap image format. |
-| Tga     | 24bit Targa or 32bit Targa image format.   |
-| Jpeg    | jpeg image format.                         |
+  
+**Values**  
+| Value   | Description                                |  
+|---------|--------------------------------------------|  
+| Png     | png image format.                          |  
+| Bmp     | 24bit Bitmap or 32bit Bitmap image format. |  
+| Tga     | 24bit Targa or 32bit Targa image format.   |  
+| Jpeg    | jpeg image format.                         |  
 | Unknown | Unsupported image format.                  |  
-#### ColorFormat
+#### ColorFormat  
 ``` cpp  
 enum class ColorFormat
 {
@@ -27,9 +30,13 @@ enum class ColorFormat
     RGBA,
 };
 ```  
+**Description**  
 ColorFormat is images color format.  
-| Value   | Description                                  |
-|---------|----------------------------------------------|
-| RGB     | Image color format (Red, Green, Blue)        |
+  
+**Values**  
+| Value   | Description                                  |  
+|---------|----------------------------------------------|  
+| RGB     | Image color format (Red, Green, Blue)        |  
 | RGBA    | Image color format (Red, Green, Blue, Alpha) |  
+  
 ##### [Back](Document.md)
