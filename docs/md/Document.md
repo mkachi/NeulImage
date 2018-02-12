@@ -1,0 +1,11 @@
+## SnowPlainImage  
+* [Enumerations](Enumerations.html)  
+    * ImageType  
+    * ColorFormat  
+* [Functions](Functions.html)  
+    * spGetError  
+    * spLoadImage  
+    * spLoadPng  
+    * spLoadBmp  
+    * spLoadTga  
+    * spLoadJpeg  

@@ -3,7 +3,8 @@ This project is a sub-module of (Current private)[SnowPlainEngine](https://githu
 Supported formats are bmp, tga, png, jpg.
 Future support formats dds, psd.
 
-#### [API Document](https://mkachi.github.io/SnowPlainImage/)
+## API Document
+[Document](docs/md/Document.md)
 
 ## Public software license notice
 ### SnowPlainImage

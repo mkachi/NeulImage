@@ -1,7 +1,7 @@
 <!DOCTYPE html>
   <html>
     <head>
-      <title>Document</title>
+      <title>Enumerations</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -213,28 +213,96 @@ code.language-yaml {
       <div class="mume markdown-preview   ">
       <h2 class="mume-header" id="snowplainimage">SnowPlainImage</h2>
 
-<ul>
-<li><a href="Enumerations.html">Enumerations</a>
-<ul>
-<li>ImageType</li>
-<li>ColorFormat</li>
-</ul>
-</li>
-<li><a href="Functions.html">Functions</a>
-<ul>
-<li>spGetError</li>
-<li>spLoadImage</li>
-<li>spLoadPng</li>
-<li>spLoadBmp</li>
-<li>spLoadTga</li>
-<li>spLoadJpeg</li>
-</ul>
-</li>
-</ul>
+<h3 class="mume-header" id="enumerations">Enumerations</h3>
+
+<h4 class="mume-header" id="imagetype">ImageType</h4>
+
+<pre class="language-cpp"><span class="token keyword">enum</span> <span class="token keyword">class</span> <span class="token class-name">ImageType</span>
+<span class="token punctuation">{</span>
+    Png<span class="token punctuation">,</span>
+    Bmp<span class="token punctuation">,</span>
+    Tga<span class="token punctuation">,</span>
+    Jpeg<span class="token punctuation">,</span>
+    Unknown<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</pre>
+<p>ImageType is images file format.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Png</td>
+<td>png image format.</td>
+</tr>
+<tr>
+<td>Bmp</td>
+<td>24bit Bitmap or 32bit Bitmap image format.</td>
+</tr>
+<tr>
+<td>Tga</td>
+<td>24bit Targa or 32bit Targa image format.</td>
+</tr>
+<tr>
+<td>Jpeg</td>
+<td>jpeg image format.</td>
+</tr>
+<tr>
+<td>Unknown</td>
+<td>Unsupported image format.</td>
+</tr>
+</tbody>
+</table>
+<h4 class="mume-header" id="colorformat">ColorFormat</h4>
+
+<pre class="language-cpp"><span class="token keyword">enum</span> <span class="token keyword">class</span> <span class="token class-name">ColorFormat</span>
+<span class="token punctuation">{</span>
+    RGB<span class="token punctuation">,</span>
+    RGBA<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</pre>
+<p>ColorFormat is images color format.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RGB</td>
+<td>Image color format (Red, Green, Blue)</td>
+</tr>
+<tr>
+<td>RGBA</td>
+<td>Image color format (Red, Green, Blue, Alpha)</td>
+</tr>
+</tbody>
+</table>
+<h5 class="mume-header" id="backdocumenthtml"><a href="index.html">Back</a></h5>
+
 
       </div>
       <div class="md-sidebar-toc"><ul>
-<li><a href="#snowplainimage">SnowPlainImage</a></li>
+<li><a href="#snowplainimage">SnowPlainImage</a>
+<ul>
+<li><a href="#enumerations">Enumerations</a>
+<ul>
+<li><a href="#imagetype">ImageType</a></li>
+<li><a href="#colorformat">ColorFormat</a>
+<ul>
+<li><a href="#backdocumenthtml">Back</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
       <a id="sidebar-toc-btn">≡</a>

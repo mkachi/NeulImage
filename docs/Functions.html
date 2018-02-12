@@ -1,7 +1,7 @@
 <!DOCTYPE html>
   <html>
     <head>
-      <title>Document</title>
+      <title>Functions</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -213,28 +213,390 @@ code.language-yaml {
       <div class="mume markdown-preview   ">
       <h2 class="mume-header" id="snowplainimage">SnowPlainImage</h2>
 
-<ul>
-<li><a href="Enumerations.html">Enumerations</a>
-<ul>
-<li>ImageType</li>
-<li>ColorFormat</li>
-</ul>
-</li>
-<li><a href="Functions.html">Functions</a>
-<ul>
-<li>spGetError</li>
-<li>spLoadImage</li>
-<li>spLoadPng</li>
-<li>spLoadBmp</li>
-<li>spLoadTga</li>
-<li>spLoadJpeg</li>
-</ul>
-</li>
-</ul>
+<h3 class="mume-header" id="functions">Functions</h3>
+
+<h4 class="mume-header" id="spgeterror">spGetError</h4>
+
+<pre class="language-cpp">SP_SM <span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> <span class="token function">spGetError</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre>
+<p><strong>Author</strong><br>
+M_Kachi</p>
+<p><strong>Description</strong><br>
+The errors are stacked on the stack and pulled one by one.</p>
+<p><strong>Returns</strong><br>
+Error message</p>
+<h4 class="mume-header" id="sploadimage">spLoadImage</h4>
+
+<pre class="language-cpp">SP_SM <span class="token keyword">bool</span> <span class="token function">spLoadImage</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> filePath<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">&amp;</span> width<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">&amp;</span> height<span class="token punctuation">,</span> ColorFormat<span class="token operator">&amp;</span> format<span class="token punctuation">,</span> <span class="token keyword">unsigned</span> <span class="token keyword">char</span><span class="token operator">*</span><span class="token operator">&amp;</span> pixels<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre>
+<p><strong>Author</strong><br>
+<code>M_Kachi</code></p>
+<p><strong>Description</strong><br>
+Load png, bmp, tga, jpeg image file.</p>
+<p><strong>Params</strong></p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filePath</td>
+<td>Image file path</td>
+</tr>
+<tr>
+<td>width</td>
+<td>Variable to store image width</td>
+</tr>
+<tr>
+<td>height</td>
+<td>Variable to store image height</td>
+</tr>
+<tr>
+<td>format</td>
+<td>Variable to store image color format</td>
+</tr>
+<tr>
+<td>pixels</td>
+<td>Variable to store image pixels</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Return Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Success</td>
+<td>true</td>
+</tr>
+<tr>
+<td>Failed</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h4 class="mume-header" id="sploadimage-1">spLoadImage</h4>
+
+<pre class="language-cpp">SP_SM <span class="token keyword">bool</span> <span class="token function">spLoadImage</span><span class="token punctuation">(</span>FILE<span class="token operator">*</span><span class="token operator">&amp;</span> file<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">&amp;</span> width<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">&amp;</span> height<span class="token punctuation">,</span> ColorFormat<span class="token operator">&amp;</span> format<span class="token punctuation">,</span> <span class="token keyword">unsigned</span> <span class="token keyword">char</span><span class="token operator">*</span><span class="token operator">&amp;</span> pixels<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre>
+<p><strong>Author</strong><br>
+<code>M_Kachi</code></p>
+<p><strong>Description</strong><br>
+Load png, bmp, tga, jpeg image file.</p>
+<p><strong>Params</strong></p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>file</td>
+<td>File pointer</td>
+</tr>
+<tr>
+<td>width</td>
+<td>Variable to store image width</td>
+</tr>
+<tr>
+<td>height</td>
+<td>Variable to store image height</td>
+</tr>
+<tr>
+<td>format</td>
+<td>Variable to store image color format</td>
+</tr>
+<tr>
+<td>pixels</td>
+<td>Variable to store image pixels</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Return Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Success</td>
+<td>true</td>
+</tr>
+<tr>
+<td>Failed</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h4 class="mume-header" id="sploadpng">spLoadPng</h4>
+
+<pre class="language-cpp">SP_SM <span class="token keyword">bool</span> <span class="token function">spLoadPng</span><span class="token punctuation">(</span>FILE<span class="token operator">*</span><span class="token operator">&amp;</span> file<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">&amp;</span> width<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">&amp;</span> height<span class="token punctuation">,</span> ColorFormat<span class="token operator">&amp;</span> format<span class="token punctuation">,</span> <span class="token keyword">unsigned</span> <span class="token keyword">char</span><span class="token operator">*</span><span class="token operator">&amp;</span> pixels<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre>
+<p><strong>Author</strong><br>
+<code>M_Kachi</code></p>
+<p><strong>Description</strong><br>
+Load png image file.</p>
+<p><strong>Params</strong></p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>file</td>
+<td>File pointer</td>
+</tr>
+<tr>
+<td>width</td>
+<td>Variable to store image width</td>
+</tr>
+<tr>
+<td>height</td>
+<td>Variable to store image height</td>
+</tr>
+<tr>
+<td>format</td>
+<td>Variable to store image color format</td>
+</tr>
+<tr>
+<td>pixels</td>
+<td>Variable to store image pixels</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Return Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Success</td>
+<td>true</td>
+</tr>
+<tr>
+<td>Failed</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h4 class="mume-header" id="sploadbmp">spLoadBmp</h4>
+
+<pre class="language-cpp">SP_SM <span class="token keyword">bool</span> <span class="token function">spLoadBmp</span><span class="token punctuation">(</span>FILE<span class="token operator">*</span><span class="token operator">&amp;</span> file<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">&amp;</span> width<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">&amp;</span> height<span class="token punctuation">,</span> ColorFormat<span class="token operator">&amp;</span> format<span class="token punctuation">,</span> <span class="token keyword">unsigned</span> <span class="token keyword">char</span><span class="token operator">*</span><span class="token operator">&amp;</span> pixels<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre>
+<p><strong>Author</strong><br>
+<code>M_Kachi</code></p>
+<p><strong>Description</strong><br>
+Load 24bit Bitmap or 32bit Bitmap image file.</p>
+<p><strong>Params</strong></p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>file</td>
+<td>File pointer</td>
+</tr>
+<tr>
+<td>width</td>
+<td>Variable to store image width</td>
+</tr>
+<tr>
+<td>height</td>
+<td>Variable to store image height</td>
+</tr>
+<tr>
+<td>format</td>
+<td>Variable to store image color format</td>
+</tr>
+<tr>
+<td>pixels</td>
+<td>Variable to store image pixels</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Return Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Success</td>
+<td>true</td>
+</tr>
+<tr>
+<td>Failed</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h4 class="mume-header" id="sploadtga">spLoadTga</h4>
+
+<pre class="language-cpp">SP_SM <span class="token keyword">bool</span> <span class="token function">spLoadTga</span><span class="token punctuation">(</span>FILE<span class="token operator">*</span><span class="token operator">&amp;</span> file<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">&amp;</span> width<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">&amp;</span> height<span class="token punctuation">,</span> ColorFormat<span class="token operator">&amp;</span> format<span class="token punctuation">,</span> <span class="token keyword">unsigned</span> <span class="token keyword">char</span><span class="token operator">*</span><span class="token operator">&amp;</span> pixels<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre>
+<p><strong>Author</strong><br>
+<code>M_Kachi</code></p>
+<p><strong>Description</strong><br>
+Load 24bit Targa or 32bit Targa image file.</p>
+<p><strong>Params</strong></p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>file</td>
+<td>File pointer</td>
+</tr>
+<tr>
+<td>width</td>
+<td>Variable to store image width</td>
+</tr>
+<tr>
+<td>height</td>
+<td>Variable to store image height</td>
+</tr>
+<tr>
+<td>format</td>
+<td>Variable to store image color format</td>
+</tr>
+<tr>
+<td>pixels</td>
+<td>Variable to store image pixels</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Return Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Success</td>
+<td>true</td>
+</tr>
+<tr>
+<td>Failed</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h4 class="mume-header" id="sploadjpeg">spLoadJpeg</h4>
+
+<pre class="language-cpp">SP_SM <span class="token keyword">bool</span> <span class="token function">spLoadJpeg</span><span class="token punctuation">(</span>FILE<span class="token operator">*</span><span class="token operator">&amp;</span> file<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">&amp;</span> width<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">&amp;</span> height<span class="token punctuation">,</span> ColorFormat<span class="token operator">&amp;</span> format<span class="token punctuation">,</span> <span class="token keyword">unsigned</span> <span class="token keyword">char</span><span class="token operator">*</span><span class="token operator">&amp;</span> pixels<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre>
+<p><strong>Author</strong><br>
+<code>M_Kachi</code></p>
+<p><strong>Description</strong><br>
+Load jpeg image file.</p>
+<p><strong>Params</strong></p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>file</td>
+<td>File pointer</td>
+</tr>
+<tr>
+<td>width</td>
+<td>Variable to store image width</td>
+</tr>
+<tr>
+<td>height</td>
+<td>Variable to store image height</td>
+</tr>
+<tr>
+<td>format</td>
+<td>Variable to store image color format</td>
+</tr>
+<tr>
+<td>pixels</td>
+<td>Variable to store image pixels</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Return Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Success</td>
+<td>true</td>
+</tr>
+<tr>
+<td>Failed</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h5 class="mume-header" id="backdocumenthtml"><a href="index.html">Back</a></h5>
+
 
       </div>
       <div class="md-sidebar-toc"><ul>
-<li><a href="#snowplainimage">SnowPlainImage</a></li>
+<li><a href="#snowplainimage">SnowPlainImage</a>
+<ul>
+<li><a href="#functions">Functions</a>
+<ul>
+<li><a href="#spgeterror">spGetError</a></li>
+<li><a href="#sploadimage">spLoadImage</a></li>
+<li><a href="#sploadimage-1">spLoadImage</a></li>
+<li><a href="#sploadpng">spLoadPng</a></li>
+<li><a href="#sploadbmp">spLoadBmp</a></li>
+<li><a href="#sploadtga">spLoadTga</a></li>
+<li><a href="#sploadjpeg">spLoadJpeg</a>
+<ul>
+<li><a href="#backdocumenthtml">Back</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
       <a id="sidebar-toc-btn">≡</a>
