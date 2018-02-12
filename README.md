@@ -1,7 +1,7 @@
 # SnowPlainImage
-This project is a sub-module of [SnowPlainEngine](https://github.com/MKachi/SnowPlainEngine).  
-Supported formats are bmp, tga, png.
-Future support formats jpg, dds, psd.
+This project is a sub-module of (Current private)[SnowPlainEngine](https://github.com/MKachi/SnowPlainEngine).  
+Supported formats are bmp, tga, png, jpg.
+Future support formats dds, psd.
 
 ## Public software license notice
 ### SnowPlainImage

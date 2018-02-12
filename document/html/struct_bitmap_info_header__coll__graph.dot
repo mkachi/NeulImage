@@ -1,0 +1,6 @@
+digraph "BitmapInfoHeader"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{BitmapInfoHeader\n|+ size\l+ width\l+ height\l+ planes\l+ bitCount\l+ compression\l+ sizeImage\l+ xPelsPerMeter\l+ yPelsPerMeter\l+ clrUsed\l+ clrImportant\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

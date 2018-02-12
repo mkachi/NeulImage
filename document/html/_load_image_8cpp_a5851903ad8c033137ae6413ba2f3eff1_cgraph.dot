@@ -1,0 +1,25 @@
+digraph "spLoadImage"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node39 [label="spLoadImage",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node39 -> Node40 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node40 [label="formatCheck",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_load_image_8cpp.html#a1fcf54613d3063e9ec575e5f7641dd2d"];
+  Node40 -> Node41 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node41 [label="checkPng",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_load_image_8cpp.html#a6078894e56b7fc8c3b6fe7fe3d01e911"];
+  Node40 -> Node42 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node42 [label="checkBmp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_load_image_8cpp.html#aebd1f654dbcd718e927feda8ec22c130"];
+  Node40 -> Node43 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node43 [label="checkTga",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_load_image_8cpp.html#a1ae73a68eeabd90030e191b4da0bdd66"];
+  Node40 -> Node44 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node44 [label="checkJpeg",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_load_image_8cpp.html#a248d8487925d8d11716c0de3113409ca"];
+  Node39 -> Node45 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node45 [label="spLoadPng",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_load_image_8cpp.html#abd864f46608f3cd6bf7512d1a3e80a92"];
+  Node39 -> Node46 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node46 [label="spLoadBmp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_load_image_8cpp.html#a9e82c7780ec36b3750d9d6b4a9ae9caf"];
+  Node39 -> Node47 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node47 [label="spLoadTga",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_load_image_8cpp.html#a7c091eb6155f93fbef7fe3dd769b5349"];
+  Node39 -> Node48 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node48 [label="spLoadJpeg",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_load_image_8cpp.html#aa18321f35b2df03105f847d3e4b7ac13"];
+}

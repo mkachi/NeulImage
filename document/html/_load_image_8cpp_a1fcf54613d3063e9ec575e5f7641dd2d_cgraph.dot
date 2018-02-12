@@ -1,0 +1,15 @@
+digraph "formatCheck"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node16 [label="formatCheck",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node16 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="checkPng",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_load_image_8cpp.html#a6078894e56b7fc8c3b6fe7fe3d01e911"];
+  Node16 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="checkBmp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_load_image_8cpp.html#aebd1f654dbcd718e927feda8ec22c130"];
+  Node16 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="checkTga",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_load_image_8cpp.html#a1ae73a68eeabd90030e191b4da0bdd66"];
+  Node16 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="checkJpeg",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_load_image_8cpp.html#a248d8487925d8d11716c0de3113409ca"];
+}
