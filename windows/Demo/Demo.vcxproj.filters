@@ -57,4 +57,24 @@
       <Filter>Demo</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\jpegTest.jpg">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\pngTest.png">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\tgaTest_24.tga">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\tgaTest_32.tga">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\bmpTest_24.bmp">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\bmpTest_32.bmp">
+      <Filter>res</Filter>
+    </Image>
+  </ItemGroup>
 </Project>

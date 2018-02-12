@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include <string>
 
 struct TgaHeader
 {
@@ -29,6 +30,19 @@ SP_SM bool loadTga(const char* filename, int* width, int* height, ImageFormat* f
 		// not found tga
 		return false;
 	}
+
+	fseek(fp, -18, SEEK_END);
+	char mimeType[17];
+	fread(mimeType, 1, 17, fp);
+	mimeType[16] = '\0';
+	printf("%s\n", mimeType);
+	if (strcmp(mimeType, "TRUEVISION-XFILE") != 0)
+	{
+		// is not tga
+		return false;
+	}
+	fseek(fp, 0, SEEK_SET);
+
 	unsigned char ucharTemp;
 	fread(&ucharTemp, sizeof(unsigned char), 1, fp);
 	fread(&ucharTemp, sizeof(unsigned char), 1, fp);

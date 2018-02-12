@@ -7,8 +7,7 @@ void Demo::init()
 	material = new Material();
 	material->materialID = 0;
 	material->shader = loadShader("res/shader.vert", "res/shader.frag");
-	material->texture = loadJpegDemo("res/jpegTest.jpg", &imageWidth, &imageHeight);
-
+	material->texture = loadTgaDemo("res/tgaTest_32.tga", &imageWidth, &imageHeight);
 	renderer = new BatchRenderer();
 
 	sprite = new Sprite();

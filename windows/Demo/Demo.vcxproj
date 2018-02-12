@@ -211,6 +211,14 @@
       <Project>{07a6faad-8428-4d16-80f7-ed706be94679}</Project>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\bmpTest_24.bmp" />
+    <Image Include="res\bmpTest_32.bmp" />
+    <Image Include="res\jpegTest.jpg" />
+    <Image Include="res\pngTest.png" />
+    <Image Include="res\tgaTest_24.tga" />
+    <Image Include="res\tgaTest_32.tga" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
