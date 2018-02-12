@@ -7,7 +7,7 @@ int main()
 #if defined(DEBUG) | defined(_DEBUG)
 #pragma warning(disable : 4996)
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-	//		_CrtSetBreakAlloc(29784);
+	//		_CrtSetBreakAlloc(333);
 	if (AllocConsole())
 	{
 		freopen("CONIN$", "rb", stdin);

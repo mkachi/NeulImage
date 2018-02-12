@@ -2,11 +2,12 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClInclude Include="..\include\SnowPlainImage.h" />
-    <ClInclude Include="..\include\SPSubModule.h" />
+    <ClInclude Include="..\include\SubModule.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\LoadPng.cpp" />
     <ClCompile Include="src\LoadBmp.cpp" />
     <ClCompile Include="src\LoadTga.cpp" />
+    <ClCompile Include="src\LoadJpeg.cpp" />
   </ItemGroup>
 </Project>

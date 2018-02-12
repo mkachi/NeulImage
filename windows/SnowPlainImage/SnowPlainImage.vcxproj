@@ -112,7 +112,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>libpngd.lib;zlibstatd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libpngd.lib;zlibstatd.lib;jpegd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -125,7 +125,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>libpngd.lib;zlibstatd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libpngd.lib;zlibstatd.lib;jpegd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -142,7 +142,8 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>libpng.lib;zlibstat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libpng.lib;zlibstat.lib;jpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -159,15 +160,16 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>libpng.lib;zlibstat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libpng.lib;zlibstat.lib;jpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\include\SnowPlainImage.h" />
-    <ClInclude Include="..\include\SPSubModule.h" />
+    <ClInclude Include="..\include\SubModule.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\LoadBmp.cpp" />
+    <ClCompile Include="src\LoadJpeg.cpp" />
     <ClCompile Include="src\LoadPng.cpp" />
     <ClCompile Include="src\LoadTga.cpp" />
   </ItemGroup>
