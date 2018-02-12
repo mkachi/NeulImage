@@ -44,6 +44,9 @@
     <ClInclude Include="src\Renderer.h">
       <Filter>Utility</Filter>
     </ClInclude>
+    <ClInclude Include="src\Config.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Time.cpp">

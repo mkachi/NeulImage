@@ -4,25 +4,23 @@
 #include <string>
 #include <SnowPlainImage.h>
 
-static GLuint loadPngDemo(const std::string& filename, int* outWidth, int* outHeight)
+static GLuint loadImage(const std::string& filename, int& width, int& height)
 {
-	int width, height;
-	unsigned char* textureData = nullptr;
-	ImageFormat imageFormat;
-	bool error = loadPng(filename.c_str(), &width, &height, &imageFormat, &textureData);
+	ColorFormat colorFormat;
+	unsigned char* pixels = nullptr;
+	bool error = spLoadImage(filename.c_str(), width, height, colorFormat, pixels);
 	if (!error)
 	{
-		// Unable to load png file
 		return 0;
 	}
 
 	int format;
-	switch (imageFormat)
+	switch (colorFormat)
 	{
-	case ImageFormat::RGB:
+	case ColorFormat::RGB:
 		format = GL_RGB;
 		break;
-	case ImageFormat::RGBA:
+	case ColorFormat::RGBA:
 		format = GL_RGBA;
 		break;
 	}
@@ -31,138 +29,11 @@ static GLuint loadPngDemo(const std::string& filename, int* outWidth, int* outHe
 	glGenTextures(1, &result);
 	glBindTexture(GL_TEXTURE_2D, result);
 	glTexImage2D(GL_TEXTURE_2D, 0, format,
-		width, height, 0, format, GL_UNSIGNED_BYTE, textureData);
+		width, height, 0, format, GL_UNSIGNED_BYTE, pixels);
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-
-	cleanUpPng();
-
-	(*outWidth) = width;
-	(*outHeight) = height;
-
-	return result;
-}
-
-static GLuint loadBmpDemo(const std::string& filename, int* outWidth, int* outHeight)
-{
-	int width, height;
-	unsigned char* textureData = nullptr;
-	ImageFormat imageFormat;
-	bool error = loadBmp(filename.c_str(), &width, &height, &imageFormat, &textureData);
-	if (!error)
-	{
-		// Unable to load bmp file
-		return 0;
-	}
-
-	int format;
-	switch (imageFormat)
-	{
-	case ImageFormat::RGB:
-		format = GL_RGB;
-		break;
-	case ImageFormat::RGBA:
-		format = GL_RGBA;
-		break;
-	}
-	GLuint result;
-	glGenTextures(1, &result);
-	glBindTexture(GL_TEXTURE_2D, result);
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB,
-		width, height, 0, format, GL_UNSIGNED_BYTE, textureData);
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-
-	cleanUpBmp();
-
-	(*outWidth) = width;
-	(*outHeight) = height;
-
-	return result;
-}
-
-static GLuint loadTgaDemo(const std::string& filename, int* outWidth, int* outHeight)
-{
-	int width, height;
-	unsigned char* textureData = nullptr;
-	ImageFormat imageFormat;
-	bool error = loadTga(filename.c_str(), &width, &height, &imageFormat, &textureData);
-	if (!error)
-	{
-		// Unable to load tga file
-		return 0;
-	}
-
-	int format;
-	switch (imageFormat)
-	{
-	case ImageFormat::RGB:
-		format = GL_RGB;
-		break;
-	case ImageFormat::RGBA:
-		format = GL_RGBA;
-		break;
-	}
-
-	GLuint result;
-	glGenTextures(1, &result);
-	glBindTexture(GL_TEXTURE_2D, result);
-	glTexImage2D(GL_TEXTURE_2D, 0, format,
-		width, height, 0, format, GL_UNSIGNED_BYTE, textureData);
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-
-	cleanUpTga();
-
-	(*outWidth) = width;
-	(*outHeight) = height;
-
-	return result;
-}
-
-static GLuint loadJpegDemo(const std::string& filename, int* outWidth, int* outHeight)
-{
-	int width, height;
-	unsigned char* textureData = nullptr;
-	ImageFormat imageFormat;
-	bool error = loadJpeg(filename.c_str(), &width, &height, &imageFormat, &textureData);
-	if (!error)
-	{
-		// Unable to load jpeg file
-		return 0;
-	}
-
-	int format;
-	switch (imageFormat)
-	{
-	case ImageFormat::RGB:
-		format = GL_RGB;
-		break;
-	case ImageFormat::RGBA:
-		format = GL_RGBA;
-		break;
-	}
-
-	GLuint result;
-	glGenTextures(1, &result);
-	glBindTexture(GL_TEXTURE_2D, result);
-	glTexImage2D(GL_TEXTURE_2D, 0, format,
-		width, height, 0, format, GL_UNSIGNED_BYTE, textureData);
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-
-	cleanUpJpeg();
-
-	(*outWidth) = width;
-	(*outHeight) = height;
 
 	return result;
 }

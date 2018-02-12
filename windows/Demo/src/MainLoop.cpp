@@ -9,7 +9,7 @@ void MainLoop::init(Scene* scene)
     glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
     glfwWindowHint(GLFW_DOUBLEBUFFER, GL_TRUE);
 
-    _window = glfwCreateWindow(1280, 720, "SnowPlainImage Demo", nullptr, nullptr);
+    _window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "SnowPlainImage Demo", nullptr, nullptr);
     glfwMakeContextCurrent(_window);
     glewExperimental = GL_TRUE;
 

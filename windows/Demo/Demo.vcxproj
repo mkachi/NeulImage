@@ -192,6 +192,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Demo.h" />
+    <ClInclude Include="src\Config.h" />
     <ClInclude Include="src\MainLoop.h" />
     <ClInclude Include="src\MathPlus.h" />
     <ClInclude Include="src\Renderer.h" />

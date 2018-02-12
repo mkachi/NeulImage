@@ -1,23 +1,28 @@
 #pragma once
 
 #include "SubModule.h"
+#include <stdio.h>
 
-enum class ImageFormat
+enum class ImageType
+{
+	Png,
+	Bmp,
+	Tga,
+	Jpeg,
+	Unknown,
+};
+
+enum class ColorFormat
 {
 	RGB,
 	RGBA,
 };
-extern "C"
-{
-	SP_SM bool loadPng(const char* filename, int* width, int* height, ImageFormat* format, unsigned char** data);
-	SP_SM void cleanUpPng();
 
-	SP_SM bool loadBmp(const char* filename, int* width, int* height, ImageFormat* format, unsigned char** data);
-	SP_SM void cleanUpBmp();
+SP_SM const char* spGetError();
 
-	SP_SM bool loadTga(const char* filename, int* width, int* height, ImageFormat* format, unsigned char** data);
-	SP_SM void cleanUpTga();
-
-	SP_SM bool loadJpeg(const char* filename, int* width, int* heignt, ImageFormat* format, unsigned char** data);
-	SP_SM void cleanUpJpeg();
-}
+SP_SM bool spLoadImage(const char* filePath, int& width, int& height, ColorFormat& format, unsigned char*& pixels);
+SP_SM bool spLoadImage(FILE*& file, int& width, int& height, ColorFormat& format, unsigned char*& pixels);
+SP_SM bool spLoadPng(FILE*& file, int& width, int& height, ColorFormat& format, unsigned char*& pixels);
+SP_SM bool spLoadBmp(FILE*& file, int& width, int& height, ColorFormat& format, unsigned char*& pixels);
+SP_SM bool spLoadTga(FILE*& file, int& width, int& height, ColorFormat& format, unsigned char*& pixels);
+SP_SM bool spLoadJpeg(FILE*& file, int& width, int& height, ColorFormat& format, unsigned char*& pixels);

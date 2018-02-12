@@ -2,14 +2,17 @@
 
 #include "Scene.h"
 #include "Renderer.h"
+#include "Config.h"
+
+#define TEXTURE_SIZE 6
 
 class Demo
 	: public Scene
 {
 private:
-	Sprite* sprite;
+	Sprite* sprites[TEXTURE_SIZE];
+	Material* materials[TEXTURE_SIZE];
 	BatchRenderer* renderer;
-	Material* material;
 	mat4 pv;
 
 public:
