@@ -1,7 +1,11 @@
 # SnowPlainImage
-This project is a sub-module of (Current private)[SnowPlainEngine](https://github.com/MKachi/SnowPlainEngine).  
-Supported formats are bmp, tga, png, jpg.
-Future support formats dds, psd.
+This project is a sub-module of (Current private) [SnowPlainEngine](https://github.com/MKachi/SnowPlainEngine).  
+Supported formats are bmp, tga, png, jpg.  
+Future support formats dds, psd and image save.  
+
+## License
+SnowPlainImage is licensed under the [GNU Lesser General Public License v3.0](https://github.com/MKachi/SnowPlainImage/blob/master/LICENSE)  
+
 
 ## API Document
 [Document](https://mkachi.github.io/SnowPlainImage/)
