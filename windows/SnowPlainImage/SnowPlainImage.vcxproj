@@ -213,6 +213,9 @@
       <SubSystem>Windows</SubSystem>
       <AdditionalDependencies>libpngd.lib;zlibstatd.lib;jpegd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <Lib>
+      <AdditionalDependencies>libpngd.lib;zlibstatd.lib;jpegd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -239,6 +242,9 @@
       <SubSystem>Windows</SubSystem>
       <AdditionalDependencies>libpngd.lib;zlibstatd.lib;jpegd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <Lib>
+      <AdditionalDependencies>libpngd.lib;zlibstatd.lib;jpegd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -275,6 +281,9 @@
       <AdditionalDependencies>libpng.lib;zlibstat.lib;jpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
+    <Lib>
+      <AdditionalDependencies>libpng.lib;zlibstat.lib;jpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -309,6 +318,9 @@
       <SubSystem>Windows</SubSystem>
       <AdditionalDependencies>libpng.lib;zlibstat.lib;jpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <Lib>
+      <AdditionalDependencies>libpng.lib;zlibstat.lib;jpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\include\SnowPlainImage.h" />
