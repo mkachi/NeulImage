@@ -101,7 +101,7 @@ void writeError(const char* log)
 		tail->next = node;
 	}
 }
-SP_SM const char* spGetError()
+SP_SM const char* spGetImageError()
 {
 	if (head != nullptr)
 	{

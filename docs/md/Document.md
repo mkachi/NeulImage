@@ -3,9 +3,9 @@
     * ImageType  
     * ColorFormat  
 * [Functions](Functions.md)  
-    * spGetError  
-    * spLoadImage  
-    * spLoadPng  
-    * spLoadBmp  
-    * spLoadTga  
-    * spLoadJpeg  
+    * siGetError  
+    * siLoadImage  
+    * siLoadPng  
+    * siLoadBmp  
+    * siLoadTga  
+    * siLoadJpeg  

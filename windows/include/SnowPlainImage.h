@@ -50,11 +50,11 @@ enum class ColorFormat
 
 /**
   *	@author M_Kachi
-  *	@date 2018-02-13
+  *	@date 2018-02-16
   *	@brief The errors are stacked on the stack and pulled one by one.
   *	@return Error message
 */
-SP_SM const char* spGetError();
+SP_SM const char* spGetImageError();
 
 /**
   *	@author M_Kachi
