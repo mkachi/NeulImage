@@ -1,17 +1,17 @@
-# SnowPlainImage
-This project is a sub-module of (Current private) [SnowPlainEngine](https://github.com/MKachi/SnowPlainEngine).  
+# NeulImage
+This project is a sub-module of (Current private) [NeulEngine](https://github.com/MKachi/NeulEngine).  
 Supported formats are bmp, tga, png, jpg.  
 Future support formats dds, psd and image save(png, jpg, bmp).  
 
 ## License
-SnowPlainImage is licensed under the [GNU Lesser General Public License v2.1](https://github.com/MKachi/SnowPlainImage/blob/master/LICENSE)  
+SnowPlainImage is licensed under the [GNU Lesser General Public License v2.1](https://github.com/MKachi/NeulImage/blob/master/LICENSE)  
 
 
 ## API Document
-[Document](https://mkachi.github.io/SnowPlainImage/)
+[Document](https://mkachi.github.io/NeulImage/)
 
 ## Public software license notice
-### SnowPlainImage
+### NeulImage
 #### zlib
 ##### version : 1.2.11
 The zlib library used in our project. Used zlib source codes are published in [zlib](https://zlib.net/), and under [zlib license](https://zlib.net/zlib_license.html).
