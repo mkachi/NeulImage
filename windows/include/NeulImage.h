@@ -20,8 +20,29 @@
 
 #pragma once
 
-#ifdef NL_SM_EXPORTS
-#define NL_SM __declspec(dllexport)
-#else
-#define NL_SM
-#endif
+#include "SubModule.h"
+#include <stdio.h>
+
+enum class ImageType
+{
+	Png,
+	Bmp,
+	Tga,
+	Jpeg,
+	Unknown,
+};
+
+enum class ColorFormat
+{
+	RGB,
+	RGBA,
+};
+
+NL_SM const char* niGetImageError();
+
+NL_SM bool niLoadImage(const char* filePath, int& width, int& height, ColorFormat& format, unsigned char*& pixels);
+NL_SM bool niLoadImage(FILE*& file, int& width, int& height, ColorFormat& format, unsigned char*& pixels);
+NL_SM bool niLoadPng(FILE*& file, int& width, int& height, ColorFormat& format, unsigned char*& pixels);
+NL_SM bool niLoadBmp(FILE*& file, int& width, int& height, ColorFormat& format, unsigned char*& pixels);
+NL_SM bool niLoadTga(FILE*& file, int& width, int& height, ColorFormat& format, unsigned char*& pixels);
+NL_SM bool niLoadJpeg(FILE*& file, int& width, int& height, ColorFormat& format, unsigned char*& pixels);

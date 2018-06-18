@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SnowPlainImage", "SnowPlainImage\SnowPlainImage.vcxproj", "{07A6FAAD-8428-4D16-80F7-ED706BE94679}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NeulImage", "NeulImage\NeulImage.vcxproj", "{07A6FAAD-8428-4D16-80F7-ED706BE94679}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo", "Demo\Demo.vcxproj", "{FB50773A-8376-4FD3-B588-F510B4586468}"
 EndProject

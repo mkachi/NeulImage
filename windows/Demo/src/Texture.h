@@ -2,13 +2,13 @@
 
 #include <glew.h>
 #include <string>
-#include <SnowPlainImage.h>
+#include <NeulImage.h>
 
 static GLuint loadImage(const std::string& filename, int& width, int& height)
 {
 	ColorFormat colorFormat;
 	unsigned char* pixels = nullptr;
-	bool error = spLoadImage(filename.c_str(), width, height, colorFormat, pixels);
+	bool error = niLoadImage(filename.c_str(), width, height, colorFormat, pixels);
 	if (!error)
 	{
 		return 0;

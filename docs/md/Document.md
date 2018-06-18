@@ -1,11 +1,11 @@
-## SnowPlainImage  
+## NeulImage  
 * [Enumerations](Enumerations.md)  
     * ImageType  
     * ColorFormat  
 * [Functions](Functions.md)  
-    * siGetError  
-    * siLoadImage  
-    * siLoadPng  
-    * siLoadBmp  
-    * siLoadTga  
-    * siLoadJpeg  
+    * niGetError  
+    * niLoadImage  
+    * niLoadPng  
+    * niLoadBmp  
+    * niLoadTga  
+    * niLoadJpeg  

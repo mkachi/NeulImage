@@ -1,4 +1,4 @@
-## SnowPlainImage  
+## NeulImage  
 ### Enumerations  
 #### ImageType  
 ``` cpp  

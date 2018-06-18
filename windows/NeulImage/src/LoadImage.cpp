@@ -1,5 +1,5 @@
 /*--
- *	SnowPlainImage
+ *	NeulImage
  *	Copyright (C) 2018, ¸ÀÄ«Ä¡ (mkachi@naver.com)
  *	
  *	This library is free software; you can redistribute it and/or
@@ -18,10 +18,9 @@
  *	USA
 */
 
-#include "SnowPlainImage.h"
+#include "NeulImage.h"
 #include "png/png.h"
 #include "jpeg/jpeglib.h"
-#include "jpeg/jerror.h"
 #include <stdlib.h>
 #include <string.h>
 
@@ -101,7 +100,7 @@ void writeError(const char* log)
 		tail->next = node;
 	}
 }
-SP_SM const char* spGetImageError()
+NL_SM const char* niGetImageError()
 {
 	if (head != nullptr)
 	{
@@ -203,15 +202,15 @@ ImageType formatCheck(FILE* file)
 	return ImageType::Unknown;
 }
 
-SP_SM bool spLoadImage(const char* filePath, int& width, int& height, ColorFormat& format, unsigned char*& pixels)
+NL_SM bool niLoadImage(const char* filePath, int& width, int& height, ColorFormat& format, unsigned char*& pixels)
 {
 	FILE* file = fopen(filePath, "rb");
 	switch (formatCheck(file))
 	{
-	case ImageType::Png:	return spLoadPng(file, width, height, format, pixels);
-	case ImageType::Bmp:	return spLoadBmp(file, width, height, format, pixels);
-	case ImageType::Tga:	return spLoadTga(file, width, height, format, pixels);
-	case ImageType::Jpeg:	return spLoadJpeg(file, width, height, format, pixels);
+	case ImageType::Png:	return niLoadPng(file, width, height, format, pixels);
+	case ImageType::Bmp:	return niLoadBmp(file, width, height, format, pixels);
+	case ImageType::Tga:	return niLoadTga(file, width, height, format, pixels);
+	case ImageType::Jpeg:	return niLoadJpeg(file, width, height, format, pixels);
 	default:
 	case ImageType::Unknown:
 		ERROR("Unsupported image format.");
@@ -219,14 +218,14 @@ SP_SM bool spLoadImage(const char* filePath, int& width, int& height, ColorForma
 	}
 	return false;
 }
-SP_SM bool spLoadImage(FILE*& file, int& width, int& height, ColorFormat& format, unsigned char*& pixels)
+NL_SM bool niLoadImage(FILE*& file, int& width, int& height, ColorFormat& format, unsigned char*& pixels)
 {
 	switch (formatCheck(file))
 	{
-	case ImageType::Png:	return spLoadPng(file, width, height, format, pixels);
-	case ImageType::Bmp:	return spLoadBmp(file, width, height, format, pixels);
-	case ImageType::Tga:	return spLoadTga(file, width, height, format, pixels);
-	case ImageType::Jpeg:	return spLoadJpeg(file, width, height, format, pixels);
+	case ImageType::Png:	return niLoadPng(file, width, height, format, pixels);
+	case ImageType::Bmp:	return niLoadBmp(file, width, height, format, pixels);
+	case ImageType::Tga:	return niLoadTga(file, width, height, format, pixels);
+	case ImageType::Jpeg:	return niLoadJpeg(file, width, height, format, pixels);
 	default:
 	case ImageType::Unknown:
 		ERROR("Unsupported image format.");
@@ -235,7 +234,7 @@ SP_SM bool spLoadImage(FILE*& file, int& width, int& height, ColorFormat& format
 	return false;
 }
 
-SP_SM bool spLoadPng(FILE*& file, int& width, int& height, ColorFormat& format, unsigned char*& pixels)
+NL_SM bool niLoadPng(FILE*& file, int& width, int& height, ColorFormat& format, unsigned char*& pixels)
 {
 	fseek(file, 8, SEEK_SET);
 
@@ -342,7 +341,7 @@ SP_SM bool spLoadPng(FILE*& file, int& width, int& height, ColorFormat& format, 
 
 	return true;
 }
-SP_SM bool spLoadBmp(FILE*& file, int& width, int& height, ColorFormat& format, unsigned char*& pixels)
+NL_SM bool niLoadBmp(FILE*& file, int& width, int& height, ColorFormat& format, unsigned char*& pixels)
 {
 	BitmapFileHeader fileHeader;
 	fread(&fileHeader, 1, sizeof(BitmapFileHeader), file);
@@ -418,7 +417,7 @@ SP_SM bool spLoadBmp(FILE*& file, int& width, int& height, ColorFormat& format, 
 
 	return true;
 }
-SP_SM bool spLoadTga(FILE*& file, int& width, int& height, ColorFormat& format, unsigned char*& pixels)
+NL_SM bool niLoadTga(FILE*& file, int& width, int& height, ColorFormat& format, unsigned char*& pixels)
 {
 	unsigned char ucharTemp;
 	fread(&ucharTemp, sizeof(unsigned char), 1, file);
@@ -497,7 +496,7 @@ SP_SM bool spLoadTga(FILE*& file, int& width, int& height, ColorFormat& format, 
 
 	return true;
 }
-SP_SM bool spLoadJpeg(FILE*& file, int& width, int& height, ColorFormat& format, unsigned char*& pixels)
+NL_SM bool niLoadJpeg(FILE*& file, int& width, int& height, ColorFormat& format, unsigned char*& pixels)
 {
 	jpeg_info	info;
 	jpeg_err	error;
