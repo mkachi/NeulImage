@@ -129,7 +129,7 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)\Build\Products\$(Platform)_$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)\Build\Intermediates\$(Platform)_$(Configuration)\</IntDir>
-    <TargetName>SnowPlainImaged</TargetName>
+    <TargetName>NeulImaged</TargetName>
     <IncludePath>$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)library\$(PlatformTarget);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
@@ -137,7 +137,7 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)\Build\Products\$(Platform)_$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)\Build\Intermediates\$(Platform)_$(Configuration)\</IntDir>
-    <TargetName>SnowPlainImaged-static</TargetName>
+    <TargetName>NeulImaged-static</TargetName>
     <IncludePath>$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)library\$(PlatformTarget);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
@@ -145,7 +145,7 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)\Build\Products\$(Platform)_$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)\Build\Intermediates\$(Platform)_$(Configuration)\</IntDir>
-    <TargetName>SnowPlainImaged</TargetName>
+    <TargetName>NeulImaged</TargetName>
     <IncludePath>$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)library\$(PlatformTarget);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
@@ -153,7 +153,7 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)\Build\Products\$(Platform)_$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)\Build\Intermediates\$(Platform)_$(Configuration)\</IntDir>
-    <TargetName>SnowPlainImaged-static</TargetName>
+    <TargetName>NeulImaged-static</TargetName>
     <IncludePath>$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)library\$(PlatformTarget);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
@@ -161,7 +161,7 @@
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)\Build\Products\$(Platform)_$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)\Build\Intermediates\$(Platform)_$(Configuration)\</IntDir>
-    <TargetName>SnowPlainImage</TargetName>
+    <TargetName>NeulImage</TargetName>
     <IncludePath>$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)library\$(PlatformTarget);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
@@ -169,7 +169,7 @@
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)\Build\Products\$(Platform)_$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)\Build\Intermediates\$(Platform)_$(Configuration)\</IntDir>
-    <TargetName>SnowPlainImage-static</TargetName>
+    <TargetName>NeulImage-static</TargetName>
     <IncludePath>$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)library\$(PlatformTarget);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
@@ -177,7 +177,7 @@
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)\Build\Products\$(Platform)_$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)\Build\Intermediates\$(Platform)_$(Configuration)\</IntDir>
-    <TargetName>SnowPlainImage</TargetName>
+    <TargetName>NeulImage</TargetName>
     <IncludePath>$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)library\$(PlatformTarget);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
@@ -185,7 +185,7 @@
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)\Build\Products\$(Platform)_$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)\Build\Intermediates\$(Platform)_$(Configuration)\</IntDir>
-    <TargetName>SnowPlainImage-static</TargetName>
+    <TargetName>NeulImage-static</TargetName>
     <IncludePath>$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)library\$(PlatformTarget);$(LibraryPath)</LibraryPath>
   </PropertyGroup>

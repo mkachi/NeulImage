@@ -78,8 +78,8 @@ typedef struct Log_def
 	struct Log_def* next;
 }Log;
 
-typedef struct jpeg_decompress_struct jpeg_info;
-typedef struct jpeg_error_mgr jpeg_err;
+typedef struct jpeg_decompress_struct	jpeg_info;
+typedef struct jpeg_error_mgr			jpeg_err;
 
 static Log* head = nullptr;
 static Log* tail = nullptr;

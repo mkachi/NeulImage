@@ -32,13 +32,13 @@ void Demo::init()
 		vec2(0.5f, -1.2f),
 	};
 
-	GLuint shader = loadShader("res/shader.vert", "res/shader.frag");
+	//GLuint shader = loadShader("res/shader.vert", "res/shader.frag");
 	for (int i = 0; i < TEXTURE_SIZE; ++i)
 	{
 		int width, height;
 		materials[i] = new Material();
 		materials[i]->materialID = i;
-		materials[i]->shader = shader;
+		//materials[i]->shader = shader;
 		materials[i]->texture = loadImage(imagePaths[i].c_str(), width, height);
 
 		float x = positions[i].x - (width * pivots[i].x);

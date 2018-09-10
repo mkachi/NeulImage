@@ -108,14 +108,14 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32s.lib;glfw3dll.lib;SnowPlainImage.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32s.lib;glfw3dll.lib;NeulImaged.lib;%(AdditionalDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>
       </Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>copy D:\Git\SnowPlainEngine\SubModules\SnowPlainImage\windows\Demo\library\dll\$(platformTarget)\*.dll D:\Git\SnowPlainEngine\SubModules\SnowPlainImage\windows\\Build\Products\Win32_Debug /y</Command>
+      <Command>copy D:\Git\NeulEngine\SubModules\NeulImage\windows\Demo\library\dll\$(platformTarget)\*.dll D:\Git\NeulEngine\SubModules\NeulImage\windows\Build\Products\$(Platform)_$(Configuration) /y</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -128,14 +128,14 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32s.lib;glfw3dll.lib;SnowPlainImage.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32s.lib;glfw3dll.lib;NeulImaged.lib;%(AdditionalDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>
       </Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>copy D:\Git\SnowPlainEngine\SubModules\SnowPlainImage\windows\Demo\library\dll\$(platformTarget)\*.dll D:\Git\SnowPlainEngine\SubModules\SnowPlainImage\windows\\Build\Products\Win32_Debug /y</Command>
+      <Command>copy D:\Git\NeulEngine\SubModules\NeulImage\windows\Demo\library\dll\$(platformTarget)\*.dll D:\Git\NeulEngine\SubModules\NeulImage\windows\Build\Products\$(Platform)_$(Configuration) /y</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -152,14 +152,14 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32s.lib;glfw3dll.lib;SnowPlainImage.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32s.lib;glfw3dll.lib;NeulImage.lib;%(AdditionalDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>
       </Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>copy D:\Git\SnowPlainEngine\SubModules\SnowPlainImage\windows\Demo\library\dll\$(platformTarget)\*.dll D:\Git\SnowPlainEngine\SubModules\SnowPlainImage\windows\\Build\Products\Win32_Debug /y</Command>
+      <Command>copy D:\Git\NeulEngine\SubModules\NeulImage\windows\Demo\library\dll\$(platformTarget)\*.dll D:\Git\NeulEngine\SubModules\NeulImage\windows\Build\Products\$(Platform)_$(Configuration) /y</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -176,14 +176,14 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32s.lib;glfw3dll.lib;SnowPlainImage.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32s.lib;glfw3dll.lib;NeulImage.lib;%(AdditionalDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>
       </Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>copy D:\Git\SnowPlainEngine\SubModules\SnowPlainImage\windows\Demo\library\dll\$(platformTarget)\*.dll D:\Git\SnowPlainEngine\SubModules\SnowPlainImage\windows\\Build\Products\Win32_Debug /y</Command>
+      <Command>copy D:\Git\NeulEngine\SubModules\NeulImage\windows\Demo\library\dll\$(platformTarget)\*.dll D:\Git\NeulEngine\SubModules\NeulImage\windows\Build\Products\$(Platform)_$(Configuration) /y</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
